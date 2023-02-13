@@ -37,7 +37,7 @@ public class ClienteInfraRepository implements ClienteRepository {
 	}
 
 	@Override
-	public Cliente buscaClienteAtravsId(UUID idCliente) {
+	public Cliente buscaClienteAtravesId(UUID idCliente) {
 		log.info("[inicia] ClienteInfraRepository - buscaClienteAtravsId");
 		Cliente cliente = clienteSpringDataJPARepository.findById(idCliente)
 				.orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Cliente não encontrado!"));
